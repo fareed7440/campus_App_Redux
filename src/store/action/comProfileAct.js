@@ -4,24 +4,29 @@ import * as db from '../../firebase/firebaseCnfg'
 export function CompanyProfileRequest(comProfile){
     return dispatch =>{
 dispatch(companyProfileRequest());
-return db.database().ref('/company').once('value',snapshot=>{
+return db.database.ref('/company').once('value',snapshot=>{
     const comp = [];
     snapshot.forEach(childSnapshot=>{
-        var inComp = childSnapshot.val();
-        inComp.key = childSnapshot.key;
-        if(childSnapshot.hasChild('cccccc')){
-            var ccccc = Object.keys(childSnapshot.val().cccccc).map(key=>{
-                return {
-                    key:childSnapshot.val().cccccc[key]
-                }
-            })
+        comp.push(snapshot.val());
+        console.log('eeeeeeeeee',comp)
+//         var inComp = childSnapshot.val();
+//         inComp.key = childSnapshot.key;
 
-            inComp.cccccc = ccccc;
-            comp.push(inComp)
-        }
-        else{
-comp.push(inComp)
-        }
+//         if(childSnapshot.hasChild('cccccc')){
+//             var ccccc = Object.keys(childSnapshot.val().cccccc).map(key=>{
+//                 return {
+//                     key:childSnapshot.val().cccccc[key]
+//                 }
+//             })
+
+//             inComp.cccccc = ccccc;
+//             comp.push(inComp)
+//             console.log('eeeeee',comp);
+//         }
+//         else{
+// comp.push(inComp)
+//         }
+
 
     })
 

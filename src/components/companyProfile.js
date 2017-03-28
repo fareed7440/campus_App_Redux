@@ -16,7 +16,7 @@ componentDidMount(){
     this.props.companyProfileRequest()
 }
 componentWillMount(){
-this.state.arr.push(this.props.application.user)
+this.state.arr.push(this.props.application)
 console.log("aghaaaaaaaa",this.state.arr)
 
 }
