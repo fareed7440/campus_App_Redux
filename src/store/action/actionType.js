@@ -9,7 +9,12 @@ const ActionTypes = {
 
     CompanySignupRequest:'CompanySignupRequest',
     CompanySignupRequestSuccess:'CompanySignupRequestSuccess',
-    CompanySignupRequestFailed:'CompanySignupRequestFailed'
+    CompanySignupRequestFailed:'CompanySignupRequestFailed',
+
+CompanyProfileRequest:'CompanyProfileRequest',
+CompanyProfileRequestSuccess:'companyProfileRequestSuccess',
+CompanyProfileRequestFailed:'CompanyProfileRequestFailed '
+
 }
 
 

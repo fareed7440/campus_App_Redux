@@ -8,9 +8,7 @@ export function applicationReducer(state =intial_state ,action){
         case ActionTypes.loadInitialState:{
             return state;
         }
-        case ActionTypes.stdSignupRequest : {
-            return state;
-        }
+    
         case ActionTypes.StdSignupRequestSuccess:{
             var stdsignup = Object.assign({},state,{user:action.data});
              state = stdsignup;
@@ -21,6 +19,14 @@ case ActionTypes.CompanySignupRequest:{
     state=companysignup;
     return state;
 }
+case ActionTypes.companyProfileRequest:{
+var companyProfile = Object.assign({}, state,{user:action.data})
+state = companyProfile;
+return state;
+}
+
+
+
 
         
         default:

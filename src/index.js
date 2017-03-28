@@ -8,6 +8,7 @@ injectTapEventPlugin();
 import { Provider } from 'react-redux';
 import store from './store/store';
 import CompanySignUpContainer from './container/comSignupCn'
+import CompanyProfileContainer from './container/companyProfCon'
 import  Stdsignupcontainer from './container/stdSignup'
 import Main from './components/main'
 import {Router,Route,indexRoute,browserHistory} from 'react-router'
@@ -21,6 +22,7 @@ return(
 <Route path = 'main' component={Main}></Route>
 <Route path = 'stdSignup' component={Stdsignupcontainer}></Route>
 <Route path = 'comSignupCn' component={CompanySignUpContainer}></Route>
+<Route path = 'companyProfCon' component={CompanyProfileContainer}></Route>
   </Router>
   </MuiThemeProvider>
   </Provider>
